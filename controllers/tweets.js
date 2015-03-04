@@ -7,6 +7,9 @@ Twitter.TweetsController = Ember.ArrayController.extend({
       var date = new Date().toLocaleString();
       tweets.addObject({ date: date, id: 0, message: this.message });
     },
+    saveReply: function() {
+      this.tweets.replies.push(this.reply)
+    }
   }
 
 });
